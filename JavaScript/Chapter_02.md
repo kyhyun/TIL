@@ -38,13 +38,13 @@ HTML안에 스크립트 태그를 이용하여 HTML 문서에 자바스크립트
 자바스크립트의 코드양이 많아지는 경우 파일로 나누어 처리하는데, 스크립트 태그에 src 속성을 이용해서 HTML에 해당 파일의 내용을 삽입해서 이용하는 방식이다.
 
 ```html
-// 파일의 위치한 경로를 속성으로 사용하는 예제
+<!-- 파일의 위치한 경로를 속성으로 사용하는 예제-->
 <script src="/path/to/script.js"></script>
 
-// URL 전체를 속성으로 사용하는 예제
+<!-- URL 전체를 속성으로 사용하는 예제-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js"></script>
 
-// 한 HTML 문서 내에 복수의 외부 스크립트를 삽입하여 사용할 수 있음
+<!-- 한 HTML 문서 내에 복수의 외부 스크립트를 삽입하여 사용할 수 있음 -->
 <script src="/js/script1.js"></script>
 <script src="/js/script2.js"></script>
 ```
