@@ -1,4 +1,4 @@
-<img src="C:\Users\yeong-hyeon kim\Pictures\깃 블로그 게시용 이미지\JavaScript.png" alt="JavaScript" style="zoom:50%;" />
+![JavaScript](https://user-images.githubusercontent.com/77887712/129482791-b4cd7442-0ab7-40ef-ba6e-95c0320e98bf.png)
 
 > 이 글은 모던 JavaScript 튜토리얼의 내용을 참조하였으며, 공부한 내용을 기록하고 복습하기 위한 용도로 작성하였습니다.
 
@@ -105,7 +105,9 @@ alert(age); // 'undefined'가 출력
 
 #### 8. typrof 연산자
 
-인수의 자료형을 문자열로 반환하는 연산자로 주로 자료형에 따라 처리방식을 다르게 하거나, 변수의 자료형을 빠르게 확인할 때 사용한다.
+인수의 자료형을 문자열로 반환하는 연산자로 주로 자료형에 따라 처리방식을 다르게 하거나, 
+변수의 자료형을 빠르게 확인할 때 사용한다.
+
 
 1. 연산자 `typeof x`
 2. 함수 `typeof(x)`
