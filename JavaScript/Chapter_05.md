@@ -1,4 +1,5 @@
-<img src="C:\Users\yeong-hyeon kim\Pictures\깃 블로그 게시용 이미지\JavaScript.png" alt="JavaScript" style="zoom:50%;" />
+![JavaScript](https://user-images.githubusercontent.com/77887712/129542514-660441b5-38ce-4f19-91ce-7eee88434645.png)
+
 
 > 이 글은 모던 JavaScript 튜토리얼의 내용을 참조하였으며, 공부한 내용을 기록하고 복습하기 위한 용도로 작성하였습니다.
 
