@@ -1,7 +1,6 @@
 ![JavaScript](https://user-images.githubusercontent.com/77887712/129440754-15f66e64-f1fe-41eb-9c13-b413bb7f3500.png)
 
-> 이 글은 모던 자바스크립트 Deep Dive라는 책과 모던 JavaScript 튜토리얼의 내용을 참조하였으며,
-공부한 내용을 기록하고 복습하기 위한 용도로 작성하였습니다.
+> 이 글은 모던 JavaScript 튜토리얼의 내용을 참조하였으며, 공부한 내용을 기록하고 복습하기 위한 용도로 작성하였습니다.
 
 # Chapter 02. 자바스크립트 기본
 
