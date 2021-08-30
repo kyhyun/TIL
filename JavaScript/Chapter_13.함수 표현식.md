@@ -1,8 +1,6 @@
-<img src="C:\Users\yeong-hyeon kim\Pictures\깃 블로그 게시용 이미지\JavaScript.png" alt="JavaScript" style="zoom:50%;" />
+![JavaScript](https://user-images.githubusercontent.com/77887712/131281159-6ea032f7-3752-4ba9-8955-126be5ad5e7a.png)
 
 > 이 글은 모던 JavaScript 튜토리얼의 내용을 참조하였으며, 공부한 내용을 기록하고 복습하기 위한 용도로 작성하였습니다.
-
-
 
 # Chapter 13. 함수 표현식
 
@@ -114,7 +112,7 @@ let sum = function(a, b) {
 
  함수 표현식은 표현식이나 구문 구성의 내부에서 생성되고, 할당 연산자`=` 를 통해서 생성된다.
 
-
+---
 
 - **함수 생성 시기**
 
@@ -140,7 +138,7 @@ let sayHi = function(name) {  // sayHi가 호출되어 에러를 일으킨 후, 
 
 반면 함수 표현식은 실제 실행 흐름이 해당 함수에 도달했을 때, 함수를 생성하기 때문에 그 전까지는 그 함수를 사용할 수 없다. 
 
-
+---
 
 - **스코프(scope)**
 
@@ -206,7 +204,7 @@ welcome(); // 제대로 동작합니다.
 
 삼항 연산자를 이용해서 위의 코드를 단순화 시킬 수도 있다.
 
-
+---
 
 - **결론**
 
