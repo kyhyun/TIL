@@ -1,16 +1,20 @@
-# 에라토스테네스의 체
+# 에라토스테네스의 체 ( 소수 개수 구하기 )
 n = int(input())
+count = 0
 
-# True로 리스트들을 담아서 초기화
+# 에라토스테네스의 체 초기화: n개 요소에 True 설정(소수로 간주)
 array = [True for i in range(n+1)]
 
-# 반복을 하는데, i가 sqrt(n)까지 인덱싱해야하므로 아래와 같이 작성 
-for i in range(2, int(n**0.5)+1):
-  if array[i]==True: # 인덱싱한 값이 True라면
-    for j in range(i+i, n, i): # 해당 i의 배수에 대하여, False를 부여한다.
-      array[j] = False
+for i in range(2, int(n**0.5) + 1):
+  # i가 소수인 경우, 그의 배수들을 sqrt(n)까지 제거한다. 
+    if array[i] == True:
+        j = 2
+        while i * j <= n:
+            array[i * j] = False
+            j += 1
 
-# 소수 개수 출력
-answer = [i for i in range(2, n+1) if array[i] == True] # 나머지 True가 된 목록들을 뽑는다.
-print(answer)
-print(len(answer)) # 그 목록의 개수를 더해서 출력한다.
+# 소수 개수 산출
+for i in range(2, n+1):
+    if array[i]:
+        count += 1
+print(count)
