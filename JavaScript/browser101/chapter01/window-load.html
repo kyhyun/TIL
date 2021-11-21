@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Window Load</title>
+  <script src='test.js' defer></script>
+  <!-- defer가 사용되면, HTML이 전부 분석이 완료된 다음에 contentLoaded라는 이벤트가 발생하기 이전에 호출된다.-->
+</head>
+
+<body>
+  <script>
+    // only document
+    //document(HTML)의 리소스 로딩이 완료되면 콜백 함수가 호출된다.
+    window.addEventListener('DOMContentLoaded', () => {
+      console.log('DOMContentLoaded');
+
+      // after resources 
+      // document(HTML) 이외에 css나 imagese 등의 리소스까지 로딩을 진행한 후에 콜백 함수가 호출된다.
+      // JS 코드에서 document 이외의 자원을 사용한다고 하면 해당 이벤트를 사용한다.
+
+      // 즉, 브라우저가 html 파일을 열게되면 처음부터 HTML 페이지를 읽어서 DOM 요소로 변환한 다음에 script를 만나면 window에 이벤트 리스너를 등록하게 되고 window에 페이지에 필요한 모든 리소스가 로딩이 완료되면 콜백 함수가 출력된다. 
+      window.addEventListener('load', () => {
+        console.log('load');
+      })
+
+      // before unload, 페이지를 종료하기 이전에 프로세스를 처리할 때 사용한다. 주로 쿠키나 캐시 등의 자원을 지울때 사용한다고 한다.
+      window.addEventListener('beforeunload', () => {
+        console.log('before unload');
+      })
+
+      // resource is being unloaded
+      window.addEventListener('unload', () => {
+        console.log('unload');
+      })
+
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Window Size</title>
+  <style>
+    :root {
+      /* 색상 */
+      --color-purple: #ce93d8;
+    }
+
+    .view {
+      background-color: var(--color-purple);
+      display: inline-block;
+      padding: 16px;
+      margin-top: 16px;
+      font-size: 48px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="view">Window Size</div>
+  <script>
+    const $view = document.querySelector('.view');
+
+    function updateTag() {
+      $view.innerHTML = `
+      window.screen : ${window.screen.width}, ${window.screen.height} <br/>
+      window.outer : ${window.outerWidth}, ${window.outerHeight} <br/>
+      widnow.inner : ${window.innerWidth}, ${window.innerHeight} <br/>
+      documentElemnet.client : ${document.documentElement.clientWidth}, ${document.documentElement.clientHeight}`;
+    }
+    window.addEventListener('resize', () => {
+      updateTag();
+    });
+    updateTag();
+  </script>
+</body>
+
+</html>
