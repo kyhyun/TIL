@@ -59,7 +59,8 @@
 
 ## 브라우저 객체 구조
 
-![image-20211121203004813](C:\Users\yeong-hyeon kim\AppData\Roaming\Typora\typora-user-images\image-20211121203004813.png)
+![image](https://user-images.githubusercontent.com/77887712/142880734-e725135b-9a62-4d87-b188-18494c0bff0e.png)</br>
+[img 출처 : https://ko.javascript.info/browser-environment]
 
 #### window
 
@@ -180,7 +181,8 @@
     - **CSS position에서 right** >> 브라우저 제일 오른쪽부터 떨어져 있는 거리
     - **CSS position에서 bottom** >> 브라우저 제일 밑에서부터 떨어져 있는 거리
 
-  ![image-20211022175210078](C:\Users\yeong-hyeon kim\AppData\Roaming\Typora\typora-user-images\image-20211022175210078.png)
+  ![image](https://user-images.githubusercontent.com/77887712/142881965-2c722728-886f-4475-be79-d6b651dcd90a.png)</br>
+  [출처 : https://ko.javascript.info/browser-environment] 
 
 
 
@@ -192,7 +194,8 @@
 
   클릭을 하면 우리가 등록한 event가 리스너에 전달되는데, 이벤트에는 client x, y에 대한 값이 들어있다. 사용자가 보는 페이지의 좌표는 상관 없이  브라우저 윈도우 창(시작점 0,0)이 이벤트 발생한 지점으로부터 얼마나 떨어져있는지에 대한 좌표 정보가 전달이 된다. **즉, 브라우저 윈도우 창의 시작점에서 이벤트 발생한 지점에 대한 x와 y가 client x, y의 값이 된다.**
 
-  ![image-20211022181136484](C:\Users\yeong-hyeon kim\AppData\Roaming\Typora\typora-user-images\image-20211022181136484.png)
+  ![image](https://user-images.githubusercontent.com/77887712/142882678-c31d8c54-9954-4377-b6a5-109e46741da4.png)</br>
+  [출처 : https://ko.javascript.info/browser-environment] 
 
 
 
@@ -200,8 +203,8 @@
 
   페이지 문서 전체 길이를 놓고 봤을 때, 그 문서 위치의 시작점부터 이벤트가 발생한 지점이 얼마나 떨어져 있는지에 대한 좌표 정보가 전달이 된다. 
 
-  ![image-20211022181227872](C:\Users\yeong-hyeon kim\AppData\Roaming\Typora\typora-user-images\image-20211022181227872.png)
-
+![image](https://user-images.githubusercontent.com/77887712/142882846-152ed8ee-5149-4d6b-99e0-a9775f9096f3.png)</br>
+[출처 : https://ko.javascript.info/browser-environment] 
 
 
 ## 3) Scrolling
