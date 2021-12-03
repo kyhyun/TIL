@@ -44,7 +44,7 @@ POSIX 기반의 운영체제는 그냥 터미널에서 조작하면 사용할 �
     - 사용자 마다 모두 다른 디렉터리를 가지고 있습니다.
 - **디렉터리 이동** → `cd` (Change Directory)
     
-    > **cd 뒤에 현재 디렉터리 위치를 생략하면 `./` (= 현재 디렉터리)를 묵시적으로 적용됩니다.**
+    > **cd 뒤에 현재 디렉터리 위치를 생략하면 `./` (= 현재 디렉터리)가 묵시적으로 적용됩니다.**
     > 
     - `cd /` :  Root Directory 이동
     - `cd ~` : Home Directory 이동
@@ -59,14 +59,12 @@ POSIX 기반의 운영체제는 그냥 터미널에서 조작하면 사용할 �
     - `man command` : Manual 보기
 - **빈 파일 생성** → `touch [FileName.Extension]`
     - 숨김 파일 → `[.FileName.Extension]` , `ls` 에서 보이지 않음
-- **디렉터리 내 콘텐츠 목록 확인** → `ls` (List Directory Contents)
-    
-    ![Untitled](POSIX%20CLI%209a8fb7b8c10f4179958d30806db4497e/Untitled.png)
+- **디렉터리 내 콘텐츠 목록 확인** → `ls` (List Directory Contents)<br>
+    ![Untitled](https://user-images.githubusercontent.com/77887712/144636764-05151343-4f02-4d32-a2f8-6b4360310fc1.png)<br>
     
     - 디렉터리 내 상세 콘텐츠 목록 확인 → `ls -l` (List in Long Format)
-    
-    ![Untitled](POSIX%20CLI%209a8fb7b8c10f4179958d30806db4497e/Untitled%201.png)
-    
+    ![Untitled 1](https://user-images.githubusercontent.com/77887712/144636802-52bf0963-b02c-4bf6-af93-b7597ee963bf.png)<br>
+
     - 디렉터리 내 모든 콘텐츠 목록 확인(숨김 파일 포함) → `ls -a` (List in All Format)
 
 <aside>
@@ -104,9 +102,8 @@ ex ) `/c/Users/yeong-hyeon kim/posix` 의 경로로 이동 : `cd /c/Users/yeong-
     - **결과 :**  `/c/Users`
 - **현재 위치에서 자식(=하위) 디렉터리로 이동** : `cd (./)(path)` 혹은 `cd "(./)(path)"`
 
-ex ) `/c/Users`에서 `posix` 자식 디렉터리로 이동 → `cd "./yeong-hyeon kim/posix"`
-
-![Untitled](POSIX%20CLI%209a8fb7b8c10f4179958d30806db4497e/Untitled%202.png)
+ex ) `/c/Users`에서 `posix` 자식 디렉터리로 이동 → `cd "./yeong-hyeon kim/posix"`<br>
+![Untitled 2](https://user-images.githubusercontent.com/77887712/144637034-95641455-6e7e-49fb-87e0-1bad58a25e9a.png)<br>
 
 ### File의 CRUD
 
@@ -129,10 +126,9 @@ ex ) `/c/Users`에서 `posix` 자식 디렉터리로 이동 → `cd "./yeong-hye
     
     ex ) `dummy` 디렉터리에서 이동할 때, 오타가 발생한다면 그 뒤에 명령어는 수행하지 않도록 처리
     
-    → `mkdir dummy&&cd dumy&&touch hello.txt&&cd ..&&ls -R`
-    
-    ![Untitled](POSIX%20CLI%209a8fb7b8c10f4179958d30806db4497e/Untitled%203.png)
-    
+    → `mkdir dummy&&cd dumy&&touch hello.txt&&cd ..&&ls -R`<br>
+    ![Untitled 3](https://user-images.githubusercontent.com/77887712/144637079-3c475bb6-c0b3-41dd-b54e-58fe6f4d0593.png)<br>
+
 
 ### 유용한 단축키
 
