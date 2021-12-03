@@ -8,7 +8,6 @@
 
 유닉스 계열의 컴퓨터들을 서로 동일한 방법으로 조작하기 위한 표준 POSIX(Portable Operating System Interface)를 통해서 Unix, Linux, MacOS를 모두 다룰 수 있게 되기 때문에 운영체제의 조작하는 폭이 넓어진다는 점에서 다양한 상황에 대비가 (2종이 아닌 1종 운전면허를 따는 느낌...?) 가능해집니다.
 
- 
 
 ## 학습 내용
 
@@ -35,6 +34,8 @@ POSIX 기반의 운영체제는 그냥 터미널에서 조작하면 사용할 �
 | Update | editor, mv | mv |
 | Delete | rm | rm |
 
+---
+
 ### 경로 위치 파악 / 이동하기
 
 - **현재 위치한 디렉터리 확인 →** `pwd` (Print Working Directory)
@@ -45,12 +46,12 @@ POSIX 기반의 운영체제는 그냥 터미널에서 조작하면 사용할 �
 - **디렉터리 이동** → `cd` (Change Directory)
     
     > **cd 뒤에 현재 디렉터리 위치를 생략하면 `./` (= 현재 디렉터리)가 묵시적으로 적용됩니다.**
-    > 
     - `cd /` :  Root Directory 이동
     - `cd ~` : Home Directory 이동
     - `cd (./)(path)` : 해당 path 이동,
     - `cd "(./)(path)"` : 공백을 가진 path 이동
     
+---
 
 ### 현재 Directory의 상태 보기 와 명령어의 형식
 
@@ -67,15 +68,16 @@ POSIX 기반의 운영체제는 그냥 터미널에서 조작하면 사용할 �
 
     - 디렉터리 내 모든 콘텐츠 목록 확인(숨김 파일 포함) → `ls -a` (List in All Format)
 
-<aside>
+```
 💡 2개 이상의 속성은 띄어쓰기 혹은 속성을 합쳐서 표현할 수 있습니다.
-
-</aside>
+```
 
 ex ) 디렉터리 내 모든 상세 콘텐츠 목록 확인 (숨김 파일 포함)
 
 - 띄어쓰기 표현 방법 : `ls -a -l` 혹은 `ls -l -a`
 - 더해서 표현하는 방법 : `ls -al` 혹은 `ls -la`
+
+---
 
 ### Directory의 CRUD
 
@@ -85,10 +87,11 @@ ex ) 디렉터리 내 모든 상세 콘텐츠 목록 확인 (숨김 파일 포�
 - **디렉터리 삭제** : `rm -r [DirectoryName]` (Remove)
     - 디렉터리가 한 번에 삭제되는 것을 막기 위한 안전 장치로 `-r` 속성을 추가해주어야 합니다.
 
+---
+
 ### 절대 경로와 상대 경로 (Absolute & Relative Path)
 
 > 홈 디렉터리 : `/c/Users/yeong-hyeon kim`
-> 
 
 1. **절대 경로 :** 항상 명시되어 있는 위치로 결정되는 경로
 - **최상위 디렉터리로 이동**: `cd /`
@@ -97,7 +100,7 @@ ex ) 디렉터리 내 모든 상세 콘텐츠 목록 확인 (숨김 파일 포�
 
 ex ) `/c/Users/yeong-hyeon kim/posix` 의 경로로 이동 : `cd /c/Users/yeong-hyeon kim/posix`
 
-1. **상대 경로 :** 내가 어디인지 따라서 위치가 결정되는 경로
+2. **상대 경로 :** 내가 어디인지 따라서 위치가 결정되는 경로
 - **현재 위치(홈)에서 부모(=상위) 디렉터리로 이동** : `cd ../` **혹은** `cd ..`
     - **결과 :**  `/c/Users`
 - **현재 위치에서 자식(=하위) 디렉터리로 이동** : `cd (./)(path)` 혹은 `cd "(./)(path)"`
@@ -105,14 +108,18 @@ ex ) `/c/Users/yeong-hyeon kim/posix` 의 경로로 이동 : `cd /c/Users/yeong-
 ex ) `/c/Users`에서 `posix` 자식 디렉터리로 이동 → `cd "./yeong-hyeon kim/posix"`<br>
 ![Untitled 2](https://user-images.githubusercontent.com/77887712/144637034-95641455-6e7e-49fb-87e0-1bad58a25e9a.png)<br>
 
+---
+
 ### File의 CRUD
 
 - **파일 생성** : `nano` (text editor)
     - **빈 파일 생성** : `touch [FileName.Extension]`
-- **파일 읽기 :** `ls [FileName.Extension]`  ****혹은 `nano [FileName.Extension]`
+- **파일 읽기 :** `ls [FileName.Extension]` 혹은 `nano [FileName.Extension]`
     - **Easy Read** :  `cat [FileName.Extension]`
 - **파일 수정** : `mv [CurrentFileName] [ChangeFileName]`
 - **파일 삭제** : `rm [FileName.Extension]`
+
+---
 
 ### 구분자와 연산자
 
@@ -129,6 +136,7 @@ ex ) `/c/Users`에서 `posix` 자식 디렉터리로 이동 → `cd "./yeong-hye
     → `mkdir dummy&&cd dumy&&touch hello.txt&&cd ..&&ls -R`<br>
     ![Untitled 3](https://user-images.githubusercontent.com/77887712/144637079-3c475bb6-c0b3-41dd-b54e-58fe6f4d0593.png)<br>
 
+---
 
 ### 유용한 단축키
 
