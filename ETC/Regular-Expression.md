@@ -7,17 +7,13 @@
 - [ ] 사용자 입력이나 유효성 검사에 활용할 수 있다.
 - [ ] 문자열의 처리를 유연하게 할 수 있다.
 
-![1.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/dd200b6d-171d-46ea-9849-15ebf2258143/1.png)
+<img src="https://user-images.githubusercontent.com/77887712/147387840-03eaa364-90eb-408f-8e1e-9604d45fb7cc.png" width="500">
 
 - 오른쪽 내비게이션의 Page가 1~26까지 준비되어 있으며, 목차대로 공부하면서 예제를 직접 따라할 수 있도록 구성되어 있습니다.
 - Source : 처리하고자 하는 문자열 세트
 - Regular Expression : Source에 적용할 정규 표현식
 - First match : 해당되는 첫 번째 키워드를 보여줌
 - All matches : 해당하는 모든 키워드를 보여줌
-
-## 목차
-
-### Page 1 ~ 6 | 패턴 기본, 위치, 이스케이프, 모든 문자
 
 ### Page 1 : Case
 
@@ -151,8 +147,6 @@ Regular Expression:	\..\.
 
 마찬가지로 `.` 문자도 리터럴 값으로 사용하기 위해서는 `\` 문자로 Escape 처리해야 한다.
 
-### Page 7 ~ 10 | 문자 리스트, 서브 패턴
-
 ### Page 7 : List of Characters (`[]`)
 
 Source : `How do you do?`
@@ -249,8 +243,6 @@ Regular Expression:	..(id|esd|nd)ay
 ```
 
 서브 패턴을 사용하면 그것을 구분자로 삼아 그룹 안의 키워드에 포함되는 문자를 선택한다.
-
-### Page 11 ~ 17 | 수량자
 
 ### Page 11 : Quantifier and Letters(`*`, `+`, `?`)
 
