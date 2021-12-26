@@ -435,8 +435,241 @@ Case 1, 3, 5 는 Greedy Quantifier의 예문이고, Case 2, 4, 6은 Lazy Quantif
 
 `.*?` 는 0개, `.+?` 는 1개, `.??` 는 0개를 의미하게 된다.
 
+### Page 18 : Word Character Class (`\w`)
+
+Source : `A1 B2 c3 d_4 e:5 ffGG77--__--`
+
+```xml
+<!-- Case 1 -->
+Regular Expression:	\w
+	First match:	A1 B2 c3 d_4 e:5 ffGG77--__--
+	All matches:	A1 B2 c3 d_4 e:5 ffGG77--__--
+
+<!-- Case 2 -->
+Regular Expression:	\w*
+	First match:	A1 B2 c3 d_4 e:5 ffGG77--__--
+	All matches:	A1 B2 c3 d_4 e:5 ffGG77--__--
+
+<!-- Case 3 -->
+Regular Expression:	[a-z]\w*
+	First match:	A1 B2 c3 d_4 e:5 ffGG77--__--
+	All matches:	A1 B2 c3 d_4 e:5 ffGG77--__--
+
+<!-- Case 4 -->
+Regular Expression:	\w{5}
+	First match:	A1 B2 c3 d_4 e:5 ffGG77--__--
+	All matches:	A1 B2 c3 d_4 e:5 ffGG77--__--
+
+<!-- Case 5 -->
+Regular Expression:	[A-z0-9_]
+	First match:	A1 B2 c3 d_4 e:5 ffGG77--__--
+	All matches:	A1 B2 c3 d_4 e:5 ffGG77--__--
+```
+
+`\w` 는 모든 영문(대,소) + 숫자 + `_` 와 일치한다. 간혹 언어마다 이 약어가 지원되지 않을 수 있으며, 이 경우 Case 5번과 같은 표현식으로 대체해서 사용할 수 있다.
+
+### Page 19 : Non Word Character Class (`\W`)
+
+Source : `AS _34:AS11.23 @#$ %12^*`
+
+```xml
+<!-- Case 1 -->
+Regular Expression:	\W
+	First match:	AS _34:AS11.23 @#$ %12^*
+	All matches:	AS _34:AS11.23 @#$ %12^*
+
+<!-- Case 2 -->
+Regular Expression:	\w
+	First match:	AS _34:AS11.23 @#$ %12^*
+	All matches:	AS _34:AS11.23 @#$ %12^*
+
+<!-- Case 3 -->
+Regular Expression:	[^A-z0-9_]
+	First match:	AS _34:AS11.23 @#$ %12^*
+	All matches:	AS _34:AS11.23 @#$ %12^*
+```
+
+`\W` 는 영문(대,소) + 숫자 + `_` 를 제외한 모든 문자와 일치하며, Case 1과 Case 2는 서로 비교하는 대조군이고, Case 3은 Case 1의 표현식을 표현하는 또 다른 방법이다.
+
+### Page 20 : Space and Non Space Character Class (`\s` ,`\S`)
+
+Source : `Ere iron was found or tree was hewn, When young was mountain under moon; Ere ring was made, or wrought was woe, It walked the forests long ago.`
+
+```xml
+<!-- Case 1 -->
+Regular Expression:	\s
+	First match:	Ere iron was found or tree was hewn,
+ When young was mountain under moon; Ere ring was made,
+or wrought was woe, It walked the forests long ago.
+
+	All matches:	Ere iron was found or tree was hewn,
+When young was mountain under moon; Ere ring was made,
+or wrought was woe, It walked the forests long ago.
+
+<!-- Case 2 -->
+Regular Expression:	\S
+	First match:	Ere iron was found or tree was hewn,
+When young was mountain under moon; Ere ring was made,
+or wrought was woe, It walked the forests long ago.
+
+	All matches:	Ere iron was found or tree was hewn,
+When young was mountain under moon; Ere ring was made,
+or wrought was woe, It walked the forests long ago.
+```
+
+`\s` 는 공백, 새 줄 및 탭의 공백 문자와 일치하며, `\S` 는 공백 문자가 아닌 문자와 일치한다.
+
+### Page 21 : Digit and Non Digit Character Class (`\d`, `\D`)
+
+Source : `Page 123; published: 1234 id=12#24@112`
+
+```xml
+<!-- Case 1 -->
+Regular Expression:	\d
+	First match:	Page 123; published: 1234 id=12#24@112
+	All matches:	Page 123; published: 1234 id=12#24@112
+
+<!-- Case 2 -->
+Regular Expression:	\D
+	First match:	Page 123; published: 1234 id=12#24@112
+	All matches:	Page 123; published: 1234 id=12#24@112
+
+<!-- Case 3 -->
+Regular Expression:	[0-9]
+	First match:	Page 123; published: 1234 id=12#24@112
+	All matches:	Page 123; published: 1234 id=12#24@112
+```
+
+`\d`는 임의의 숫자와 일치하고, `\D` 는 그 외의 모든 것과 일치한다. 마찬가지로 해당 언어가 이 약어를 지원하지 않는다면 Case 3번과 같이 사용할 수 있다.
+
+### Page 22 : Word Boundary Class (`\b`)
+
+Source : `Ere iron was found or tree was hewn, When young was mountain under moon; Ere ring was made, or wrought was woe, It walked the forests long ago.`
+
+```xml
+<!-- Case 1 -->
+Regular Expression:	\b.
+	First match:	Ere iron was found or tree was hewn,
+When young was mountain under moon; Ere ring was made,
+or wrought was woe, It walked the forests long ago.
+
+All matches:	Ere iron was found or tree was hewn,
+When young was mountain under moon; Ere ring was made,
+or wrought was woe, It walked the forests long ago.
+
+<!-- Case 2 -->
+Regular Expression:	.\b
+	First match:	Ere iron was found or tree was hewn,
+When young was mountain under moon; Ere ring was made,
+or wrought was woe, It walked the forests long ago.
+
+All matches:	Ere iron was found or tree was hewn,
+When young was mountain under moon; Ere ring was made,
+or wrought was woe, It walked the forests long ago.
+```
+
+단어의 경계와 일치하며, `\w` 와 `\W` 두 문자 사이의 점으로 정의된다.
+
+### Page 23 : Non Word Boundary Class (`\B`)
+
+Source : `Ere iron was found or tree was hewn, When young was mountain under moon; Ere ring was made, or wrought was woe, It walked the forests long ago.`
+
+```xml
+<!-- Case 1 -->
+Regular Expression:	\B.
+	First match:	Ere iron was found or tree was hewn,
+When young was mountain under moon; Ere ring was made,
+or wrought was woe, It walked the forests long ago.
+
+All matches:	Ere iron was found or tree was hewn,
+When young was mountain under moon; Ere ring was made,
+or wrought was woe, It walked the forests long ago.
+
+<!-- Case 2 -->
+Regular Expression:	.\B
+	First match:	Ere iron was found or tree was hewn,
+When young was mountain under moon; Ere ring was made,
+or wrought was woe, It walked the forests long ago.
+
+All matches:	Ere iron was found or tree was hewn,
+When young was mountain under moon; Ere ring was made,
+or wrought was woe, It walked the forests long ago.
+```
+
+`\b`가 일치하지 않은 것(비 단어 경계)과 일치하며, `\w` 와 `\W` 두 문자 사이의 점으로 정의된다.
+
+### Page 24 : The Beginning and End of String(`\A`, `\Z`)
+
+Source : `Ere iron was found or tree was hewn, When young was mountain under moon; Ere ring was made, or wrought was woe, It walked the forests long ago.`
+
+```xml
+<!-- Case 1 -->
+Regular Expression:	\A...
+	First match:	Ere iron was found or tree was hewn,
+When young was mountain under moon; Ere ring was made,
+or wrought was woe, It walked the forests long ago.
+
+All matches:	Ere iron was found or tree was hewn,
+When young was mountain under moon; Ere ring was made,
+or wrought was woe, It walked the forests long ago.
+
+<!-- Case 2 -->
+Regular Expression:	...\Z
+	First match:	Ere iron was found or tree was hewn,
+When young was mountain under moon; Ere ring was made,
+or wrought was woe, It walked the forests long ago.
+
+All matches:	Ere iron was found or tree was hewn,
+When young was mountain under moon; Ere ring was made,
+or wrought was woe, It walked the forests long ago.
+```
+
+`^`과 `$`의 기능과 유사하지만 결정적으로 `multiline`에서 차이가 있다. `\A` 와 `\Z`는`multiline`에서도 전체 문장의 시작 혹은 끝을 선택하는 반면 `^`와 `$`는 라인마다 시작 혹은 끝에 존재하는 요소를 모두 탐색한다.
+
+### Page 25 : Forward Navigation(`(?=<pattern>)`)
+
+Source : `AAAX---aaax---111`
+
+```xml
+<!-- Case 1 -->
+Regular Expression:	\w+(?=X)
+	First match:	AAAX---aaax---111
+	All matches:	AAAX---aaax---111
+
+<!-- Case 2 -->
+Regular Expression:	\w+
+	First match:	AAAX---aaax---111
+	All matches:	AAAX---aaax---111
+
+<!-- Case 3 -->
+Regular Expression:	\w+(?=\w)
+	First match:	AAAX---aaax---111
+	All matches:	AAAX---aaax---111
+```
+
+`(?=<pattern>)` 은 앞에서 키워드를 탐색하면서 키워드를 발견하면 즉시 탐색을 중단하고, 그 키워드 이전까지 결과를 반영한다. Case 1의 경우 `(?=X)` 으로 X를 앞에서 탐색하기 시작하고 중간에 X를 발견하면서 그 앞에 있던 문자인 `AAA` 까지만 결과로 반영되는 것을 볼 수 있다.
+
+### Page 26 : Search Backwards(`(?!<pattern>)`)
+
+Source : `AAAX---AAA`
+
+```xml
+<!-- Case 1 -->
+Regular Expression:	AAA(?!X)
+	First match:	AAAX---AAA
+	All matches:	AAAX---AAA
+
+<!-- Case 2 -->
+Regular Expression:	AAA
+	First match:	AAAX---AAA
+	All matches:	AAAX---AAA
+```
+
+`(?!<pattern>)` 도 이와 유사하게 앞에서 키워드를 탐색하여 키워드를 발견하면 탐색을 중단하고, 그 키워드의 이후 결과를 반영한다. Case 1의 경우 `(?!X)` 으로 X를 앞에서 탐색하다가 중간에 X를 발견하면서 그 뒤에 있는 문자인 `AAA` 까지만 결과로 반영되는 것을 볼 수 있다.
+
 ---
 
 ## 참조
 
-- [Regular Expressions Tutorial](https://zvon.org/comp/r/tut-Regexp.html#intro)
+- [Regular Expressions Tutorial | zvon.org](https://zvon.org/comp/r/tut-Regexp.html#intro)
+- [RegExr: Learn, Build, & Test RegEx | regexr.com](https://regexr.com/)
