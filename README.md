@@ -6,10 +6,12 @@
 
 ## JavaScript
 
-- [모던 자바스크립트 Deep Dive](https://github.com/kyhyun/TIL/tree/main/JavaScript/Deep-dive)
+- [Modern JavaScript Deep Dive](https://github.com/kyhyun/TIL/tree/main/JavaScript/Deep-dive)
 - [Browser 101](https://github.com/kyhyun/TIL/tree/main/JavaScript/browser101)
 
 ## ETC
 
 - [POSIX CLI](https://github.com/kyhyun/TIL/blob/main/ETC/PosixCLI.md)
-- [Git 기초](https://github.com/kyhyun/TIL/blob/main/ETC/Git-basic.md)
+- [Git Basic](https://github.com/kyhyun/TIL/blob/main/ETC/Git-basic.md)
+- [SEO Basic](https://github.com/kyhyun/TIL/blob/main/ETC/SEO.md)
+- [Regular Expression](https://github.com/kyhyun/TIL/blob/main/ETC/Regular-Expression.md)
