@@ -68,7 +68,8 @@ man git-<verb>
 
 ```jsx
 //Windows OS 기준
-cd /c/user/projects
+mkdir projects
+cd projects
 
 // 위 경로에 저장소로써 필요한 뼈대 파일(.git) 하위 디렉토리 생성
 git init
@@ -76,10 +77,37 @@ git init
 
 **기존 저장소를 Clone하기**
 
-```jsx
+```xml
 // 해당 저장소의 데이터를 모두 가져와서 가장 최선의 버전으로 Checkout
-git clone <url>
+git clone <remote-url>
 ```
+
+**원격 저장소 추가**
+
+```xml
+// 로컬 저장소를 원격 저장소와 연결
+git remote add origin <remote-url>
+
+// 원격저장소 url 변경
+git remote set-url origin <remote-url>
+```
+
+---
+
+## 공간
+
+git에는 크게 세 공간으로 나누어져 있습니다.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/77887712/148734171-08c204e6-8713-4a7c-b1db-b2334dbea2ae.png" width="500px"></p>
+
+- **Working Directory ( 작업 디렉토리 )**
+  - 파일을 추가, 수정, 삭제하는 공간으로 `.git` 디렉토리를 제외한 프로젝트 디렉토리 내의 모든 공간을 의미합니다.
+- **Staging Area ( 인덱스, Index )**
+  - 작업 디렉토리와 저장소 사이에 있는 공간으로 파일들이 커밋 되기 전에 모여있는 임시 저장 공간을 의미합니다. 모든 파일은 이 공간을 거쳐 작업 디렉토리로 돌아가거나 저장소로 이동하게 됩니다.
+- **git Directory ( 저장소, Repository )**
+  - 프로젝트의 메타 데이터와 객체 데이터베이스를 저장하는 공간을 의미합니다.
+
+---
 
 ## 파일의 상태
 
@@ -89,11 +117,13 @@ git clone <url>
 
 <center><img src="https://user-images.githubusercontent.com/77887712/147036203-535e9844-ccdd-475d-8dbd-b3a733419e96.png" width="500"></center>
 
-- **Untracked** : 새로 만들어졌거나, 기존 프로젝트의 git을 초기화 한 미지의 파일
-- **Tracked** : git이 알고 있는 파일
-  - **Unmodified** : 변경 사항이 없는 파일
-  - **Modified** : 변경 사항이 발생한 파일
-  - **Staged** : Commit 진행 예정인 파일
+- **untracked (추적되지 않음 = 관리 대상이 아닌)**
+  - 작업 디렉토리에 있는 상태지만, 인데스나 저장소에 한번도 들어간 적이 없거나 예외로 `ignore` 상태의 파일의 상태를 의미합니다.
+  - **ingored (무시됨)** : `.gitIgnore` 혹은 `.git/info/exclude` 에 설정된 패턴에 의해 파일 혹은 폴더가 무시되는 대상이다.
+- **tracked (추적됨 = 관리 대상)**
+  - **unmodified (수정되지 않음)** : 저장소에 커밋 된 파일 중 변경 사항이 없는 파일
+  - **modified (수정됨)** : 커밋 된 파일 중 변경 사항이 발생한 파일
+  - **staged/indexed (인덱싱됨)** : 수정된 파일이 인덱스에 포함된 파일
 
 ---
 
@@ -103,7 +133,7 @@ git clone <url>
 
 이 이력에는 영문/숫자로 이루어진 40자리의 고유 코드(Hash Code)가 붙게 되고 저장소에서는 이것을 보고 각 저장된 내역을 구분할 수 있습니다.
 
-> ❗각 `커밋`에는 이력을 남길 수 있는 메시지를 작성할 수 있으며, 이는 특정한 의미를 갖는 업데이트 단위로 작업 별로 구분해야 추후에 이력을 통해 이전 변경 내용을 찾기 쉽습니다.
+> ❗ 각 `커밋`에는 이력을 남길 수 있는 메시지를 작성할 수 있으며, 이는 특정한 의미를 갖는 업데이트 단위로 작업 별로 구분해야 추후에 이력을 통해 이전 변경 내용을 찾기 쉽습니다.
 
 **메시지 작성 Tip**
 
@@ -147,7 +177,7 @@ git clone <url>
 
 ## 추가 정리
 
-이전에 이 버전을 관리할 수 있는 프로그램은 이미 있었습니다. 중앙에서 버전을 관리할 있는 `CVCS`(Centralized Version Control System)로 SubVersion(SVN) 과 같은 프로그램을 사용했었습니다. 하지만 이것은 중앙에서 서버에 문제가 생기면 대처하기 힘들다는 점에서 분산으로 버전 관리를 하는 Github 같은 `DVCS`(Distributed Version Control System)가 사용되고 있습니다.
+이전에 이 버전을 관리할 수 있는 프로그램은 이미 있었습니다. 중앙에서 버전을 관리할 있는 `CVCS`(Centralized Version Control System)로 **SubVersion(SVN)** 과 같은 프로그램을 사용했었습니다. 하지만 이것은 중앙에서 서버에 문제가 생기면 대처하기 힘들다는 점에서 분산으로 버전 관리를 하는 **Git**과 같은 `DVCS`(Distributed Version Control System)가 사용되고 있습니다.
 
 ## 참조
 
