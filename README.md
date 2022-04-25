@@ -7,7 +7,22 @@
 ## JavaScript
 
 - [Modern JavaScript Deep Dive](https://github.com/kyhyun/TIL/tree/main/JavaScript/Deep-dive)
-- [Browser 101](https://github.com/kyhyun/TIL/tree/main/JavaScript/browser101)
+
+## React
+
+- [React 이해하기](https://github.com/kyhyun/TIL/blob/main/React/React_%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0.md)
+- [JSX](https://github.com/kyhyun/TIL/blob/main/React/JSX.md)
+- [Component](https://github.com/kyhyun/TIL/blob/main/React/Component.md)
+- [Event Handling](https://github.com/kyhyun/TIL/blob/main/React/Event_handling.md)
+- [ref](https://github.com/kyhyun/TIL/blob/main/React/ref.md)
+
+## Python
+
+- [Python Basic Grammar](https://github.com/kyhyun/TIL/tree/main/Python/python-basic)
+
+## TypeScript
+
+- [TypeScript](https://github.com/kyhyun/TIL/tree/main/TypeScript)
 
 ## ETC
 
