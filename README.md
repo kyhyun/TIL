@@ -18,11 +18,11 @@
 
 ## Python
 
-- [Python Basic Grammar](https://github.com/kyhyun/TIL/tree/main/Python/python-basic)
+- [Python Basic](https://github.com/kyhyun/TIL/tree/main/Python/python-basic)
 
 ## TypeScript
 
-- [TypeScript](https://github.com/kyhyun/TIL/tree/main/TypeScript)
+- [TypeScript Basic](https://github.com/kyhyun/TIL/tree/main/TypeScript)
 
 ## ETC
 
@@ -30,3 +30,4 @@
 - [Git Basic](https://github.com/kyhyun/TIL/blob/main/ETC/Git-basic.md)
 - [SEO Basic](https://github.com/kyhyun/TIL/blob/main/ETC/SEO.md)
 - [Regular Expression](https://github.com/kyhyun/TIL/blob/main/ETC/Regular-Expression.md)
+- [Pseudo Code](https://github.com/kyhyun/TIL/blob/main/ETC/Pseudo-code.md)
