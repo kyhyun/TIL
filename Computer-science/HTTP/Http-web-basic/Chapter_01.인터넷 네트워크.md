@@ -39,7 +39,7 @@
 
   - **패킷 순서의 문제** : 보내야할 데이터의 크기가 크면 나눠서 전송해야할 수도 있는데, 중간 노드의 경위에 따라 전달되는 순서가 뒤바뀔 수 있기 때문에 우리가 예상했던 동작을 수행하지 못할 가능성도 존재한다.
 
-  <p><img src="https://user-images.githubusercontent.com/77887712/165710347-26618e4d-48be-4374-a9e4-f49fefb22886.png" alt="" border="1px" width="500px"></p>
+  <p align="center"><img src="https://user-images.githubusercontent.com/77887712/165710347-26618e4d-48be-4374-a9e4-f49fefb22886.png" alt="" border="1px" width="500px"></p>
 
   - 이 그림처럼 "Hello"와 "World"라는 2개의 패킷 데이터를 순서대로 전송하는데, 중간 노드 간의 통신에 따라 결과가 완전히 뒤바뀌어 "World"와 "Hello"라는 순서로 실행 흐름이 바뀔 수도 있다.
 
@@ -64,7 +64,6 @@
 
 - 클라이언트와 서버가 데이터를 주고 받기 위해 이 계층을 거치는데, 전송될 데이터가 HTTP, TCP, IP, Ethernet Frame의 정보들을 전송할 데이터와 같이 포함하게 되고 최종적으로 이 패킷을 인터넷을 거쳐 서버에 전달하게 된다.
 <p align="center"><img src="https://user-images.githubusercontent.com/77887712/165720445-5e2631f7-5a0b-4b28-88df-26c49568b488.png" alt="프로토콜 계층의 데이터 전송 과정 그림" width="500px"></p>
-
 
 
 **TCP/IP 패킷 정보**
