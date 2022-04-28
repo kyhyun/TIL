@@ -24,6 +24,9 @@
 
 - [TypeScript Basic](https://github.com/kyhyun/TIL/tree/main/TypeScript)
 
+## Computer Science
+- [HTTP](https://github.com/kyhyun/TIL/tree/main/Computer-science/HTTP)
+
 ## ETC
 
 - [POSIX CLI](https://github.com/kyhyun/TIL/blob/main/ETC/PosixCLI.md)
