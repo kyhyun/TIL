@@ -396,3 +396,7 @@ var coffeeMaker = async function () {
 };
 coffeeMaker();
 ```
+
+### 참조
+
+[코어 자바스크립트](http://www.yes24.com/Product/Goods/78586788?pid=123487&cosemkid=go15677587165719959&gclid=Cj0KCQiA1sucBhDgARIsAFoytUsc33dTsO_bVGYK1o_Yq6-DM1zjrx6VfLg1tALEQPMwts4j-FBpyjkaAmOLEALw_wcB)
